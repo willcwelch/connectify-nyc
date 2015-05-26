@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900|Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="animate.css">
+	<link rel="stylesheet" href="mainstyles.css">
+	<link rel="stylesheet" href="modals.css">
+	<title>B2B</title>
+</head>
+
+</body>
+	<div class="section">
+		<div id="top-bar">
+			<div id="logo">Connectify.NYC</div>
+			<div id="nav">
+				<a href="#" class="js-sign-up">Sign Up</a>
+				<a href="#" class="js-log-in">Log In</a></div>
+		</div>
+		<span class="big-text">Connect with other small businesses in NYC.<br />
+			<a href="search.html" class="button">Find businesses</a>
+			<!--<a href="#" class="button white-button">learn more</a>-->
+			<p><div id="testimonial"></div></p>
+		</span>
+	</div>
+
+<!-- Begin modals -->
+<div class="modal-overlay is-hidden js-backdrop"></div>
+
+<div id="signin" class="modal--signin is-hidden">
+	<div class="exit" onclick="$('.modal').toggle();"></div>
+	<h1>Log in</h1>
+	<br /><br >
+	<input type="text" size="45" placeholder="Email address"/>
+	<input type="text" size="45" placeholder="Password"/>
+	<p style="text-align:center;"><button href="#" class="green-cta wide">Sign In</button></p>
+	<span class="description">Don't have an account? <a href="#" class="description">Register.</a></span>
+</div>
+
+<div id="register" class="modal--register is-hidden">
+	<div class="exit" onclick="$('.modal').toggle();"></div>
+	<h1>Register to contact other people</h1>
+	<span class="description">You need to create an account before you can contact other people.</span>
+	<br /><br />
+	<h2>Create an account</h2>
+	<input type="text" size="30" placeholder="Name"/><input type="text" size="30" placeholder="Password"/><input type="text" size="30" placeholder="Email address"/>
+	<br /><br />
+	<h2>Your business information</h2>
+	<input type="text" size="30" placeholder="Business name"/><input type="text" size="30" placeholder="# of employees"/><input type="text" size="30" placeholder="Address"/><input type="text" size="30" placeholder="Estimated annual revenue"/><input type="text" size="30" placeholder="Public phone number"/><input type="text" size="30" placeholder="Months in business"/>
+	<br /><br />
+	<h2>You're interested in...</h2>
+	<div style="font-size:12px;">
+		<input type="checkbox" size="30" value=""/>Connecting with local businesses<br />
+		<input type="checkbox" size="30" value=""/>Partnering with other businesses<br />
+		<input type="checkbox" size="30" value=""/>Networking with other entrepreneurs<br />
+		<input type="checkbox" size="30" value=""/>Providing a service to other businesses<br />
+		<input type="checkbox" size="30" value=""/>Mentoring other business owners
+	</div>
+	<p style="text-align:center;"><button href="#" class="green-cta wide">Create an account</button></p>
+	<span class="description">Already have an account? <a href="#" class="description">Sign in.</a></span>
+</div>
+<!-- End modals -->
+
+<script src="js/vendor/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+	$(document).ready(function (){testimonial();});
+	$("#testimonial").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){$('#testimonial').toggleClass('animated bounceInUp')});
+	var testimonials = [{"image":"face2.png","quote":"Barbara's Brooklyn bakery took off after she took advice from a baker in Queens."},{"image":"face1.png","quote":"Rajesh got help with his bookstore's lighting from a newly licensed electrician."},{"image":"face3.png","quote":"Kerstin partnered with another thrift shop owner to bring in new stock."},{"image":"face4.png","quote":"Eric started a merchant's circle with the business owners in his community."}];
+	var counter = 0;
+	function testimonial(){
+		if (counter > 3) {counter = 0};
+		var html = "<img src='images/" + testimonials[counter].image + "' align='middle' width='60' height='60' /> " + testimonials[counter].quote;
+		$('#testimonial').toggleClass('animated bounceInUp');
+		$('#testimonial').html(html);
+		counter++;
+	}
+	setInterval(function(){testimonial()}, 20000);
+</script>
+</body>
+</html>

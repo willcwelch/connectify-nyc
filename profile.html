@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900|Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="modals.css">
+
+	<title>B2B</title>
+</head>
+
+<body class="profile-page">
+	<div id="top-bar">
+		<div class="container">
+			<div id="logo"><a href="index.html">Connectify.NYC</a></div>
+			<div id="nav">
+				<a href="#" class="js-sign-up">Sign Up</a>
+				<a href="#" class="js-log-in">Log In</a>
+			</div>
+		</div>
+	</div>
+	<div id="page-head">
+		<div class="container">
+			<div class="business-deets">
+				<div class="business-deets__item"><span>18</span>employees</div>
+				<div class="business-deets__item"><span>~120k</span>annual revenue</div>
+				<div class="business-deets__item"><span>16</span>months in business</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="content">
+		<div class="container">
+			<aside id="sidebar">
+				<div class="sidebar__image-container">
+					<img src="images/business logo.jpg" class="sidebar__image" />
+				</div>
+				<div class="sidebar__description">
+					<h1>Los Pollos Hermanos</h1>
+					<h2>892 Johnson Avenue <br />New York, NY 11779</h2>
+					<span>555-555-5555</span>
+					<a href="mailto:contact@polloshermanos.com">contact@polloshermanos.com</a>
+					<p>Hey! We just opened a new restaurant in Brooklyn. We're looking to meet up with other small restaurants.</p>
+				</div>
+				<button class="sidebar__cta green-cta js-message">
+					Connect with Owner
+				</button>
+			</aside>
+			<div class="content-inner">
+				<div class="tags">
+					<span class="tags__intro">This company is looking for...</span>
+					<ul class="tag__list">
+						<li class="tag__item">Business Development</li>
+						<li class="tag__item">Expansion</li>
+						<li class="tag__item">Partnerships</li>
+					</ul>
+				</div>
+
+				<span class="module__intro">In the News</span>
+				<div class="module module--news">
+					<ul class="module__list">
+						<li class="module__link"><a href="#">New Yorkers confused about recent Los Pollos Hermanos opening, but have no complaints about the food </a></li>
+						<li class="module__link"><a href="#">Los Pollos Hermanos comes to NYC</a></li>
+					</ul>
+				</div>
+
+				<span class="module__intro">Location</span>
+				<div class="module module--location">
+					<img src="images/pollos-location.jpg" alt="The map to locate us"/>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Begin modals -->
+	<div class="modal-overlay is-hidden js-backdrop"></div>
+
+	<div id="message" class="modal--message is-hidden">
+		<div class="exit"></div>
+		<h1>Send a message to Los Pollos Hermanos</h1>
+		<span class="description">Send a personalized message</span>
+		<br /><br />
+		<textarea cols="66" rows="10">Hey! Just reaching out to you for...</textarea>
+		<button href="#" class="button green-cta wide">Send message</button>
+	</div>
+
+	<div id="signin" class="modal--signin is-hidden">
+		<div class="exit" onclick="$('.modal').toggle();"></div>
+		<h1>Log in</h1>
+		<br /><br >
+		<input type="text" size="45" placeholder="Email address"/>
+		<input type="text" size="45" placeholder="Password"/>
+		<p style="text-align:center;"><button href="#" class="green-cta wide">Sign In</button></p>
+		<span class="description">Don't have an account? <a href="#" class="description">Register.</a></span>
+	</div>
+
+	<div id="register" class="modal--register is-hidden">
+		<div class="exit" onclick="$('.modal').toggle();"></div>
+		<h1>Register to contact other people</h1>
+		<span class="description">You need to create an account before you can contact other people.</span>
+		<br /><br />
+		<h2>Create an account</h2>
+		<input type="text" size="30" placeholder="Name"/><input type="text" size="30" placeholder="Password"/><input type="text" size="30" placeholder="Email address"/>
+		<br /><br />
+		<h2>Your business information</h2>
+		<input type="text" size="30" placeholder="Business name"/><input type="text" size="30" placeholder="# of employees"/><input type="text" size="30" placeholder="Address"/><input type="text" size="30" placeholder="Estimated annual revenue"/><input type="text" size="30" placeholder="Public phone number"/><input type="text" size="30" placeholder="Months in business"/>
+		<br /><br />
+		<h2>You're interested in...</h2>
+		<div style="font-size:12px;">
+			<input type="checkbox" size="30" value=""/>Connecting with local businesses<br />
+			<input type="checkbox" size="30" value=""/>Partnering with other businesses<br />
+			<input type="checkbox" size="30" value=""/>Networking with other entrepreneurs<br />
+			<input type="checkbox" size="30" value=""/>Providing a service to other businesses<br />
+			<input type="checkbox" size="30" value=""/>Mentoring other business owners
+		</div>
+		<p style="text-align:center;"><button href="#" class="green-cta wide">Create an account</button></p>
+		<span class="description">Already have an account? <a href="#" class="description">Sign in.</a></span>
+	</div>
+	<!-- End modals -->
+
+	<script src="js/vendor/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

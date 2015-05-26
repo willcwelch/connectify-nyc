@@ -1,0 +1,114 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Merriweather', serif;
+	color: #313436;
+	width: 100%;
+	height: 100%;
+	background-image: url('images/manhattan_edit.jpg');
+}
+
+/*body::after {*/
+	/*content: '';*/
+	/*width: 100%;*/
+	/*height: 100%;*/
+	/*position: absolute;*/
+	/*top: 0;*/
+	/*left: 0;*/
+	/*background: rgba(0,0,0,0.5);*/
+/*}*/
+
+#top-bar {
+	width: 80%;
+	height: 30px;
+	padding-top: 25px;
+	margin: 0 10% 25px 10%;
+	font-family: 'Raleway', sans-serif;
+	position: relative;
+}
+#logo {
+	color: #FFF;
+	font-weight: 700;
+	font-size: 30px;
+	left: 0px;
+	position: absolute;
+	bottom: 0px;
+}
+#nav{
+	color: #FFF;
+	font-weight: 500;
+	font-size: 16px;
+	text-decoration: none;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+}
+#nav a {
+	margin-left: 20px;
+	color: #FFF;
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+	text-decoration: none;
+}
+#nav a:active, #nav a:hover {
+	text-decoration: underline;
+}
+
+.section {
+	background-size: cover;
+	width: 100%;
+	min-height: 100vh;
+	float: left;
+	clear: both;
+}
+.overlay {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#testimonial {
+	font-size: 18px;
+}
+
+.big-text {
+	font-size: 64px;
+	color: #FFF;
+	width: 70%;
+	margin: 0 auto;
+	padding: 15vh 0 15vh 0;
+	display: block;
+	clear: both;
+	text-align: center;
+	font-family: 'Merriweather', serif;
+}
+.button {
+	padding: 12px 25px;
+	margin: 10px;
+	color: #FFF;
+	border-radius: 4px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	font-size: 24px;
+	background-color: #5196d6;
+	text-decoration: none;
+	transition: 0.15s ease-in-out all;
+}
+a:active.button, a:hover.button {
+	background-color: #FFF;
+	color: #5196d6;
+}
+.white-button {
+	background-color: #FFF;
+	color: #5196d6;
+}
+a:active.white-button, a:hover.white-button{
+	border: 2px solid #5196d6;
+}
